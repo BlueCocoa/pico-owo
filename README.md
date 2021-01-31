@@ -19,3 +19,6 @@ def {map} [\ {func args} {if [== args nil] {nil} {join [list [func [fst args]]] 
 def {blink} [\ {interval} {map eval [list {gpio_put 1 LED_PIN} {sleep_ms interval} {gpio_put 0 LED_PIN} {sleep_ms interval} {print "blink"}]}]
 loop 1 {blink 500}
 ```
+
+#### Credits
+[Build Your Own Lisp](http://buildyourownlisp.com/)
